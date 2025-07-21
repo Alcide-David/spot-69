@@ -1,0 +1,430 @@
+
+ <!DOCTYPE html>
+<html lang="ht">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spot 69 | Hôtel & Restaurant Premium</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="image/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    
+ <link rel="stylesheet" href="./css/menu.css">
+  </head>
+
+  <body>
+    <!-- Antèt Hero -->
+    <header class="hero-header">
+      <video autoplay muted loop id="myVideo" class="hide">
+        <source src="./video/main-video.mp4" type="video/mp4" />
+      </video>
+
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="./image/69.png" width="50" alt="Logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="index.html#about">A propos</a></li>
+          <li><a href="#">Hôtel</a></li>
+          <li><a href="menu.html">Restaurant</a></li>
+          <li><a href="#">Rooftop</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <div>
+          <a href="#" class="book btn btn-primary"
+            >Login <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </div>
+
+        <!-- Si connecté -->
+        <!-- <div class="user-menu pc">
+          <div class="user-toggle">
+            <span class="user-name">NomUtilisateur</span>
+            <img src="./image/user.png" alt="User" class="user-avatar" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="user-dropdown">
+            <a href="#"><i class="fas fa-user"></i> Mon profil</a>
+            <a href="#"><i class="fas fa-concierge-bell"></i> Mes commandes</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Mes réservations</a>
+            <div class="divider"></div>
+            <a href="#" class="logout">
+              <i class="fas fa-sign-out-alt"></i> Déconnexion
+            </a>
+          </div>
+        </div> -->
+
+        <!-- Si pas connecté -->
+        <!--
+        <a href="#" id="login" class="book btn btn-primary login-pc">
+          Login <i class="fas fa-sign-out-alt"></i>
+        </a>
+        -->
+
+        <div class="menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+
+      <!-- Menu mobile -->
+      <div id="mobileNavOverlay" class="mobile-nav-overlay"></div>
+
+      <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+          <span class="close-mobile-nav" id="closeMobileNav">
+            <i class="fas fa-times"></i>
+          </span>
+        </div>
+
+        <!-- Utilisateur connecté -->
+         <div>
+          <a href="#" class="book btn btn-primary"
+            >Login <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </div>
+        <!-- <div class="user-menu phone">
+          <div class="user-toggle">
+            <span class="user-name">NomUtilisateur</span>
+            <img src="./image/user.png" alt="User" class="user-avatar" />
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="user-dropdown">
+            <a href="#"><i class="fas fa-user"></i> Mon profil</a>
+            <a href="#"><i class="fas fa-concierge-bell"></i> Mes commandes</a>
+            <a href="#"><i class="fas fa-calendar-alt"></i> Mes réservations</a>
+            <div class="divider"></div>
+            <a href="#" class="logout">
+              <i class="fas fa-sign-out-alt"></i> Déconnexion
+            </a>
+          </div>
+        </div> -->
+
+        <!-- Sinon -->
+        <!--
+        <a href="#" id="login" class="book btn btn-primary login-phone">
+          Login <i class="fas fa-sign-out-alt"></i>
+        </a>
+        -->
+
+        <ul>
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="#about">A propos</a></li>
+          <li><a href="#">Hôtel</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="#">Rooftop</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hero-content hide">
+        <h1 class="hero-title">
+          <img src="./image/spot-text.png" width="230" alt="Spot 69" />
+        </h1>
+        <p class="hero-subtitle">
+          La combinaison parfaite entre le confort d'un hôtel de classe et la
+          saveur d'une cuisine traditionnelle et internationale
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary" id="openModal">Réserver Maintenant</a>
+          <a href="#" class="btn btn-outline">Explorer Notre Galerie</a>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
+
+
+<section class="menu section">
+	<h2 class="section-title" id="main-title">Notre Menu</h2>
+
+	<!-- ICI ON AURA LES CATEGORIES PARENTS  -->
+	<div id="menu-selection" class="container container-custom">
+		<ul class="caption-style-1">
+			<li onclick="showSection('food')">
+				<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" alt="Nourritures">
+				<div class="caption">
+					<div class="blur"></div>
+					<div class="caption-text">
+						<h1>Nourritures</h1>
+					</div>
+				</div>
+			</li>
+			<li onclick="showSection('drinks')">
+				<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Boissons">
+				<div class="caption">
+					<div class="blur"></div>
+					<div class="caption-text">
+						<h1>Boissons</h1>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- Section NOURRITURES -->
+	<div id="food-section" class="hide">
+		<h2 class="section-title food">Nourritures</h2>
+
+		<div class="tab-buttons">
+			<button class="tab-btn active" data-tab="appetizers-snacks">Appetizers / Snacks</button>
+			<button class="tab-btn" data-tab="salade">Salade</button>
+			<button class="tab-btn" data-tab="burgers-sandwich">Burgers / Sandwich</button>
+			<button class="tab-btn" data-tab="pasta">Pasta</button>
+			<button class="tab-btn" data-tab="poulet">Poulet</button>
+			<button class="tab-btn" data-tab="plats">Plats</button>
+		</div>
+
+		<div id="appetizers-snacks" class="tab-content active">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="salade" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Est Eligendi</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$8.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="burgers-sandwich" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-2.png" class="menu-img" alt="">
+					<h4>Eos Luibusdam</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$12.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="pasta" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-3.png" class="menu-img" alt="">
+					<h4>Laboriosam Direva</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$9.95</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="poulet" class="tab-content active">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="plats" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Est Eligendi</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$8.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="fritures-accompagnement" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-2.png" class="menu-img" alt="">
+					<h4>Eos Luibusdam</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$12.95</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Section BOISSONS -->
+	<div id="drinks-section" class="hide">
+	<h2 class="section-title drink">Nos Boissons</h2>
+		<!-- <button class="back-btn" onclick="goBack()">← Retour</button> -->
+		<h3></h3>
+
+			<div class="tab-buttons">
+			<button class="tab-btn active" data-tab="jus-naturel">Jus Naturel</button>
+			<button class="tab-btn" data-tab="soda-biere">Soda & Biere</button>
+			<button class="tab-btn" data-tab="cocktail">Cocktail</button>
+			<button class="tab-btn" data-tab="vin-champagne">Vin & Champagne</button>
+			<button class="tab-btn" data-tab="rhum-whisky">Rhum & Whiscky</button>
+		</div>
+
+		<div id="jus-naturel" class="tab-content active">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-4.png" class="menu-img" alt="">
+					<h4>Magnam Tiste</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$5.95</p>
+				</div>
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Aut Luia</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$14.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="soda-biere" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-6.png" class="menu-img" alt="">
+					<h4>Est Eligendi</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$8.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="cocktail" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-2.png" class="menu-img" alt="">
+					<h4>Eos Luibusdam</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$12.95</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="vin-champagne" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-3.png" class="menu-img" alt="">
+					<h4>Laboriosam Direva</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$9.95</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="rhum-whisky" class="tab-content">
+			<div class="menu-grid">
+				<div class="menu-item">
+					<img src="https://themewagon.github.io/yummy-red/assets/img/menu/menu-item-3.png" class="menu-img" alt="">
+					<h4>Laboriosam Direva</h4>
+					<p class="ingredients">Lorem, deren, trataro, filede, nerada</p>
+					<p class="price">$9.95</p>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</section>
+
+<script src="./js/menu.js"></script>
+<script src="./js/login.js"></script>
+
